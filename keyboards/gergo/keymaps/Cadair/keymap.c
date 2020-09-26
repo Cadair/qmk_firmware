@@ -24,7 +24,7 @@ const uint16_t PROGMEM keymaps[][MATRIX_ROWS][MATRIX_COLS] = {
  * ,---------------------------------------------.                         ,-------------------------------------------.
  * | L1/ESC   |   Q  |   W  |   E  |   R  |   T  |                         |   Y  |   U  |   I  |   O  |   P  |  BKSP  |
  * |----------+------+------+------+------+------|------.           .------|------+------+------+------+------+--------|
- * | LShift   |   A  |   S  |  D   |   F  |   G  | RMB  |           |      |   H  |   J  |   K  |   L  | ;  : |  ' "   |
+ * | LShift   |   A  |   S  |  D   |   F  |   G  | RMB  |           | i3-1 |   H  |   J  |   K  |   L  | ;  : |  ' "   |
  * |----------+------+------+------+------+------|------|           |------|------+------+------+------+------+--------|
  * | Ctl/BKSP |   Z  |   X  |   C  |   V  |   B  | LMB  |           | BKSP |   N  |   M  | ,  < | . >  | /  ? |  - _   |
  * `----------+------+------+------+------+-------------'           `-------------+------+------+------+------+--------'
@@ -41,7 +41,7 @@ const uint16_t PROGMEM keymaps[][MATRIX_ROWS][MATRIX_COLS] = {
  */
 [BASE] = LAYOUT_gergo(
     LT(NUMB, KC_ESC),      KC_Q,  KC_W,   KC_E,  KC_R, KC_T,                                          KC_Y,  KC_U, KC_I,    KC_O,   KC_P,    KC_F12,
-    KC_RSFT,               KC_A,  KC_S,   KC_D,  KC_F, KC_G, KC_BTN2,             LM(NUMB, MOD_LGUI), KC_H,  KC_J, KC_K,    KC_L,   KC_SCLN, KC_QUOT,
+    KC_RSFT,               KC_A,  KC_S,   KC_D,  KC_F, KC_G, KC_APP,             LM(NUMB, MOD_LGUI), KC_H,  KC_J, KC_K,    KC_L,   KC_SCLN, KC_QUOT,
     MT(MOD_LCTL, KC_BSPC), KC_Z,  KC_X,   KC_C,  KC_V, KC_B, KC_BTN1,  KC_BTN3,   KC_PGDN, KC_BSPC,   KC_N,  KC_M, KC_COMM, KC_DOT, KC_SLSH, KC_MINS,
 
     MT(MOD_LALT, KC_DEL),  MT(MOD_LGUI, KC_ENT), LT(SYMB, KC_SPC), LT(NUMB, KC_ESC),            LT(SYMB, KC_ENT), LT(NUMB, KC_SPC),  KC_TAB, KC_BSPC

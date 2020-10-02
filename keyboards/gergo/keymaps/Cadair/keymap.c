@@ -6,12 +6,13 @@
  * There's also a template for adding new layers at the bottom of this file!
  */
 
-#include QMK_KEYBOARD_H
-
 #define BASE 0 // default layer
 #define SYMB 1 // symbols
 #define NUMB 2 // numbers/motion
 #define GW2 3  // gw2
+
+#include QMK_KEYBOARD_H
+#include "g/keymap_combo.h"
 
 // Blank template at the bottom
 enum customKeycodes {
@@ -40,9 +41,9 @@ const uint16_t PROGMEM keymaps[][MATRIX_ROWS][MATRIX_COLS] = {
  *                                 `--------------'                      `--------------'
  */
 [BASE] = LAYOUT_gergo(
-    LT(NUMB, KC_ESC),      KC_Q,  KC_W,   KC_E,  KC_R, KC_T,                                          KC_Y,  KC_U, KC_I,    KC_O,   KC_P,    KC_F12,
+    LT(NUMB, KC_ESC),      KC_Q,  KC_W,   KC_E,  KC_R, KC_T,                                          KC_Y,  KC_U, KC_I,    KC_O,   KC_P,    KC_BSPC,
     KC_RSFT,               KC_A,  KC_S,   KC_D,  KC_F, KC_G, KC_APP,             LM(NUMB, MOD_LGUI),  KC_H,  KC_J, KC_K,    KC_L,   KC_SCLN, KC_QUOT,
-    MT(MOD_LCTL, KC_BSPC), KC_Z,  KC_X,   KC_C,  KC_V, KC_B, KC_BTN1,  TG(GW2),  KC_PGDN, KC_BSPC,   KC_N,  KC_M, KC_COMM, KC_DOT, KC_SLSH, KC_MINS,
+    MT(MOD_LCTL, KC_BSPC), KC_Z,  KC_X,   KC_C,  KC_V, KC_B, KC_BTN1,  KC_BTN3,  KC_PGDN, KC_BSPC,    KC_N,  KC_M, KC_COMM, KC_DOT, KC_SLSH, KC_MINS,
 
     MT(MOD_LALT, KC_DEL),  MT(MOD_LGUI, KC_ENT), LT(SYMB, KC_SPC), LT(NUMB, KC_ESC),            LT(SYMB, KC_ENT), LT(NUMB, KC_SPC),  KC_TAB, KC_BSPC
     ),  
@@ -122,10 +123,10 @@ const uint16_t PROGMEM keymaps[][MATRIX_ROWS][MATRIX_COLS] = {
  */
 
 [GW2] = LAYOUT_gergo(
-    KC_GRV,             KC_1,    KC_W,    KC_6,    KC_F5,   KC_F1,                                             KC_TRNS, KC_TRNS, KC_TRNS, KC_TRNS, KC_TRNS, KC_TRNS,
+    KC_GRV,             KC_1,    KC_W,    KC_6,    KC_F5,   KC_F1,                                           KC_TRNS, KC_TRNS, KC_TRNS, KC_TRNS, KC_TRNS, KC_TRNS,
     MT(MOD_LSFT, KC_0), KC_A,    KC_S,    KC_D,    KC_F,    KC_F2, KC_F4,                           KC_TRNS, KC_TRNS, KC_TRNS, KC_TRNS, KC_TRNS, KC_TRNS, KC_TRNS,
-    KC_LCTL,            KC_SLSH, KC_TRNS, KC_C,    KC_V,    KC_F3, KC_I,      KC_TRNS,         KC_TRNS, KC_TRNS, KC_TRNS, KC_TRNS, KC_TRNS, KC_TRNS, KC_TRNS, KC_TRNS,
-                                                   KC_LALT, KC_TRNS, KC_SPC, LT(NUMB, KC_ESC),         KC_TRNS, KC_TRNS, KC_TRNS, KC_TRNS
+    KC_LCTL,            KC_SLSH, KC_TRNS, KC_C,    KC_R,    KC_F3, KC_I,      KC_TRNS,              KC_TRNS, KC_TRNS, KC_TRNS, KC_TRNS, KC_TRNS, KC_TRNS, KC_TRNS, KC_TRNS,
+                                                   KC_LALT, KC_V, KC_SPC, LT(NUMB, KC_ESC),         KC_TRNS, KC_TRNS, KC_TRNS, KC_TRNS
     )
 };
 

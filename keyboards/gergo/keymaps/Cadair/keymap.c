@@ -71,7 +71,7 @@ const uint16_t PROGMEM keymaps[][MATRIX_ROWS][MATRIX_COLS] = {
 [SYMB] = LAYOUT_gergo(
     KC_TRNS, KC_EXLM, LSFT(KC_2), LSFT(KC_3), LSFT(KC_4), KC_PERC,                                            KC_CIRC, KC_AMPR, KC_ASTR, KC_LPRN,      KC_RPRN,       KC_NUHS,
     KC_TRNS, KC_NUHS, KC_DLR,     KC_LPRN,    KC_RPRN,    KC_GRV,       KC_TRNS,                          KC_TRNS, KC_PLUS, KC_MINS, KC_SLSH, KC_LBRC,      KC_RBRC,       KC_QUOT,
-    KC_NUBS, KC_PERC, KC_CIRC,    KC_LBRC,    KC_RBRC,    LSFT(KC_BSLS), KC_TRNS, KC_TRNS,        KC_PGUP, KC_TRNS, KC_AMPR, KC_EQL,  KC_COMM, LSFT(KC_NUBS), LSFT(KC_RBRC), KC_MINS,
+    KC_NUBS, KC_PERC, KC_CIRC,    KC_LBRC,    KC_RBRC,    LSFT(KC_BSLS), KC_TRNS, KC_TRNS,        KC_PGUP, KC_TRNS, KC_AMPR, KC_EQL,  KC_COMM, LSFT(KC_LBRC), LSFT(KC_RBRC), KC_MINS,
                                            KC_TRNS,    KC_TRNS, KC_TRNS, KC_EQL,         KC_TRNS, KC_SCLN, KC_PGUP, KC_DEL
     ),
 /* Keymap 2: Pad/Function layer

@@ -1,2 +1,3 @@
 COMB(sdBspc,    KC_BSPC,    KC_O, KC_P)
 TOGG(toggGW,    GW2,        KC_DOT, KC_SLSH, KC_MINS)
+TOGG(toggGA,    GAME,       KC_COMM, KC_DOT, KC_SLSH, KC_MINS)
